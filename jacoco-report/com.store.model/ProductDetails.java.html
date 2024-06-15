@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductDetails.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coding Test</a> &gt; <a href="index.source.html" class="el_package">com.store.model</a> &gt; <span class="el_source">ProductDetails.java</span></div><h1>ProductDetails.java</h1><pre class="source lang-java linenums">package com.store.model;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+<span class="fc" id="L8">public class ProductDetails {</span>
+    @NotNull
+    @JsonDeserialize(using = StringOnlyDeserializer.class)
+    private String name;
+
+    @NotNull
+    private ProductType type;
+
+    @NotNull
+    @Min(1)
+    private int inventory;
+
+    @NotNull
+    @Min(1)
+    private double cost;
+
+    public String getName() {
+<span class="fc" id="L25">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="fc" id="L29">        this.name = name;</span>
+<span class="fc" id="L30">    }</span>
+
+    public ProductType getType() {
+<span class="fc" id="L33">        return type;</span>
+    }
+
+    public void setType(ProductType type) {
+<span class="fc" id="L37">        this.type = type;</span>
+<span class="fc" id="L38">    }</span>
+
+    public int getInventory() {
+<span class="fc" id="L41">        return inventory;</span>
+    }
+
+    public void setInventory(int inventory) {
+<span class="fc" id="L45">        this.inventory = inventory;</span>
+<span class="fc" id="L46">    }</span>
+
+    public double getCost() {
+<span class="fc" id="L49">        return cost;</span>
+    }
+
+    public void setCost(double cost) {
+<span class="fc" id="L53">        this.cost = cost;</span>
+<span class="fc" id="L54">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L58">        return &quot;ProductDetails{&quot; +</span>
+                &quot;name=&quot; + name  +
+                &quot;, type=&quot; + type +
+                &quot;, inventory=&quot; + inventory +
+                &quot;, cost=&quot; + cost +
+                '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
